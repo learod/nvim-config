@@ -7,8 +7,8 @@ return {
     local dashboard = require("alpha.themes.dashboard")
 
     -- Set header
-    vim.api.nvim_set_hl(0, "Type", { fg = "#fd0e35" })
-
+    vim.api.nvim_set_hl(0, "HlRedGroup", { fg = "#fd0e35" })
+    dashboard.section.header.opts.hl = "HlRedGroup"
     dashboard.section.header.val = {
       "                  ⣀⣤⣴⣾⣿⣿⣿⡛⠛⠛⠛⠛⣻⣿⠿⠛⠛⠶⣤⡀",
       "              ⣀⣴⠾⠛⠉⠁    ⠙⣿⣶⣤⣶⣟⣉     ⠈⠻⣦",
