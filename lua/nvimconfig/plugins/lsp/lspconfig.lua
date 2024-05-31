@@ -3,6 +3,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    "mihyaeru21/nvim-lspconfig-bundler",
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
@@ -126,6 +127,11 @@ return {
       on_attach = on_attach,
     })
 
+    require("lspconfig-bundler").setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     lspconfig["solargraph"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
@@ -137,9 +143,16 @@ return {
       },
     })
 
-    -- lspconfig["ruby_ls"].setup({
+    -- lspconfig["ruby_lsp"].setup({
     --   capabilities = capabilities,
     --   on_attach = on_attach,
+    --   filetypes = { "ruby", "rakefile", "rubygems", "rake", "gemfile", "haml", "eruby", "rhtml", "rspec" },
+    -- })
+    --
+    -- lspconfig["standardrb"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    --   filetypes = { "ruby", "rakefile", "rubygems", "rake", "gemfile", "haml", "eruby", "rhtml", "rspec" },
     -- })
 
     -- configure lua server (with special settings)
