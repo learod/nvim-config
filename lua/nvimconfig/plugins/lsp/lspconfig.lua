@@ -135,7 +135,7 @@ return {
     lspconfig["solargraph"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "ruby", "rakefile", "rubygems", "rake", "gemfile", "haml", "eruby", "rhtml", "rspec" },
+      filetypes = { "ruby", "rakefile", "rubygems", "rake", "gemfile", "eruby", "rhtml", "rspec" },
       settings = {
         solargraph = {
           diagnostics = true,
